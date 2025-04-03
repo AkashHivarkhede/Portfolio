@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with Bootstrap</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">AKASH<span style="color: #007bff;">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#canvas">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-screen canvas -->
+    <section id="home">
+        <canvas id="canvas"></canvas>
+
+        <!-- Content on top of the canvas -->
+        <div class="container-fluid vh-100 d-flex align-items-center">
+            <div class="content">
+                <h3>Hey. It's Me</h3>
+                <h2>Akash Hivarkhede</h2>
+                <h3>And I'm</h3>
+                <h3>Full-Stack .NET Developer</h3>
+                <button class="btn btn-primary" style="margin-right: 10px;" onclick="handleButtonClick()">Click
+                    Me</button>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <!-- <h2>My Skills</h2>
+            <p>ASP.NET, C#, SQL, JavaScript, HTML, CSS, Bootstrap</p> -->
+            <h2 class="text-center my-4">My Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 skills-card">
+                    <h3 style="color :#007bff;padding: 10px 0;">Technical Skills</h3>
+                    <div class="skills">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">Bootstrap</span>
+                        <span class="skill">jQuery</span>
+                        <span class="skill">Angular</span>
+                        <span class="skill">OOPS</span>
+                        <span class="skill">C#</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">TypeScript</span>
+                        <span class="skill">.NET Core</span>
+                        <span class="skill">ASP.NET MVC 5</span>
+                        <span class="skill">WEB API 2</span>
+                        <span class="skill">MVC Core 8</span>
+                        <span class="skill">WEB API Core 8</span>
+                        <span class="skill">Entity Framework</span>
+                        <span class="skill">LINQ</span>
+                        <span class="skill">SQL Server</span>
+                        <span class="skill">Visual Studio</span>
+                        <span class="skill">VS Code</span>
+                        <span class="skill">Postman</span>
+                        <span class="skill">Swagger</span>
+                        <span class="skill">Serilog</span>
+                        <span class="skill">Log4net</span>
+                        <span class="skill">xUnit</span>
+                        <span class="skill">Moq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- <section id="projects">
+        <div class="container">
+            <h2 class="text-center my-4">Projects</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 project-card">
+                    <h4>Bus Booking System</h4>
+                    <h5>Overview</h5>
+                    <p>The Bus Booking System enables users to search, compare, and book bus tickets for various routes
+                        across the country. It includes user registration, seat selection, payment integration, and
+                        ticket generation, similar to the RedBus website.</p>
+
+                    <h5>Key Features</h5>
+                    <ul style="list-style: none;">
+                        <li><strong>User Authentication:</strong> Users can register as passengers or admins, with admin
+                            users managing system settings and user roles.</li>
+                        <li><strong>Bus Booking Process:</strong> Users can search for buses, select seats, review
+                            booking details, and complete payments securely.</li>
+                        <li><strong>Admin Module:</strong> Admins can manage users, buses, bookings, and generate
+                            reports for analytics.</li>
+                        <li><strong>Scalability:</strong> Cloud-based infrastructure supporting horizontal and vertical
+                            scaling.</li>
+                        <li><strong>Security:</strong> Robust security measures including encryption and access
+                            controls.</li>
+                        <li><strong>User-Friendly Interface:</strong> Designed for both web and mobile applications.
+                        </li>
+                    </ul>
+
+                    <h5>Architecture</h5>
+                    <p>The architecture ensures high reliability, scalability, and security through a layered approach:
+                    </p>
+                    <ul style="list-style: none;">
+                        <li><strong>Presentation Layer:</strong> Web and Mobile Applications.</li>
+                        <li><strong>Business Logic Layer:</strong> Passenger and Admin Modules.</li>
+                        <li><strong>Data Access Layer:</strong> Entity Framework Core with Repository Pattern.</li>
+                        <li><strong>Database:</strong> SQL Server.</li>
+                    </ul>
+
+                    <h5>Database Design</h5>
+                    <p>The database schema includes tables for Users, Roles, Bookings, Buses, Payments, and more,
+                        ensuring efficient data organization and integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="projects">
+        <div class="container">
+            <h2 class="text-center my-4">Projects</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 project-card p-4 shadow rounded">
+                    <h3>Bus Booking System</h3>
+    
+                    <h5>📝 Overview</h5>
+                    <p>
+                        The <strong>Bus Booking System</strong> allows users to search, compare, and book bus tickets for 
+                        different routes across the country. It includes features such as user registration, seat selection, 
+                        payment integration, and ticket generation, similar to the RedBus website.
+                    </p>
+    
+                    <h5>💻 Technologies Used</h5>
+                    <p><strong>C#</strong>, <strong>.NET MVC</strong>, <strong>Entity Framework Core</strong>, 
+                        <strong>SQL Server</strong>, <strong>Bootstrap</strong></p>
+    
+                    <h5>✅ Key Features</h5>
+                    <ul>
+                        <li><strong>User Authentication:</strong> Passengers and admins can register, with admins managing 
+                            system settings and user roles.</li>
+                        <li><strong>Bus Booking Process:</strong> Users can search for buses, select seats, review booking 
+                            details, and complete payments securely.</li>
+                        <li><strong>Admin Module:</strong> Admins can manage users, buses, bookings, and generate reports 
+                            for analytics.</li>
+                        <li><strong>Scalability:</strong> Cloud-based infrastructure supporting horizontal and vertical 
+                            scaling.</li>
+                        <li><strong>Security:</strong> Robust security measures, including encryption and access controls.</li>
+                        <li><strong>User-Friendly Interface:</strong> Optimized for both web and mobile applications.</li>
+                    </ul>
+    
+                    <h5>🏗 Architecture</h5>
+                    <ul>
+                        <li><strong>Presentation Layer:</strong> Web and Mobile Applications</li>
+                        <li><strong>Business Logic Layer:</strong> Passenger and Admin Modules</li>
+                        <li><strong>Data Access Layer:</strong> Entity Framework Core with Repository Pattern</li>
+                        <li><strong>Database:</strong> SQL Server</li>
+                    </ul>
+    
+                    <h5>📊 Database Design</h5>
+                    <p>
+                        The database includes tables for <strong>Users, Roles, Bookings, Buses, Payments</strong>, 
+                        and more, ensuring efficient data organization and integrity.
+                    </p>
+    
+                    <h5>🔗 Project Links</h5>
+                    <p>
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-dark">GitHub Repository</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+     -->
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center my-4">Projects</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 project-card p-4 shadow rounded">
+                    <h3>Bus Booking System</h3>
+
+                    <h5>Overview</h5>
+                    <p>A web-based system for searching, comparing, and booking bus tickets with seat selection,
+                        payment integration, and user management.</p>
+
+                    <h5>💻 Technologies</h5>
+                    <p><strong>C#</strong>, <strong>.NET MVC</strong>, <strong>Entity Framework</strong>,
+                        <strong>SQL Server</strong>, <strong>Bootstrap</strong>
+                    </p>
+
+                    <h5>Key Features</h5>
+                    <ul>
+                        <li><strong>Authentication:</strong> Passenger & Admin roles.</li>
+                        <li><strong>Bus Booking:</strong> Search, select seats, and pay securely.</li>
+                        <li><strong>Admin Panel:</strong> Manage users, buses, and reports.</li>
+                        <li><strong>Security:</strong> Encrypted transactions & role-based access.</li>
+                    </ul>
+
+                    <h5>🔗 Links</h5>
+                    <p>
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-dark">GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+
+    <section id="about" class="about-section bg-light">
+        <div class="container">
+            <h2 class="text-center my-4">About Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 about-card p-4 shadow rounded">
+                    <h4 style="color: #007bff;">Hi, I'm Akash Hivarkhede</h4>
+                    <p>A passionate Full-Stack .NET Developer. I recently completed my BCA degree and have knowledge in:
+                    </p>
+                    <ul>
+                    <li>OOPs, C#, LINQ, Entity Framework, MVC, Web API 2, Web API Core, .NET Core</li>
+                    <li>SQL and Web Development</li>
+                    </ul>
+                    <p>I enjoy solving complex problems and developing scalable applications.</p>
+                    <h5>Key Skills</h5>
+                    <ul>
+                        <li>Full-Stack Development with .NET Core, MVC</li>
+                        <li>Responsive UI with HTML, CSS, JavaScript, jQuery, Bootstrap</li>
+                        <li>Database Management & SQL Queries</li>
+                        <li>Writing clean, maintainable, and scalable code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center my-4">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 contact-card">
+                    <h4 style="color: #007bff;">Get in Touch</h4>
+                    <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
+                    <form style="text-align: left;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
