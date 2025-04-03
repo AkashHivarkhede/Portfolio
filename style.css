@@ -1,5 +1,5 @@
 * {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -9,7 +9,9 @@ body,
 html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
