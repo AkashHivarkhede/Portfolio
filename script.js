@@ -148,30 +148,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Handle touch events for mobile devices
-    let touchStartY = 0;
+    // let touchStartY = 0;
 
-    window.addEventListener("touchstart", function (event) {
-        touchStartY = event.touches[0].clientY; // Get the initial touch position
-    });
+    // window.addEventListener("touchstart", function (event) {
+    //     touchStartY = event.touches[0].clientY; // Get the initial touch position
+    // });
 
-    window.addEventListener("touchmove", function (event) {
-        if (isScrolling) return; // Prevent multiple triggers
+    // window.addEventListener("touchmove", function (event) {
+    //     if (isScrolling) return; // Prevent multiple triggers
 
-        let touchEndY = event.touches[0].clientY; // Get the current touch position
-        if (touchStartY - touchEndY > 50) {
-            // Swipe up
-            currentIndex++;
-        } else if (touchEndY - touchStartY > 50) {
-            // Swipe down
-            currentIndex--;
-        }
+    //     let touchEndY = event.touches[0].clientY; // Get the current touch position
+    //     if (touchStartY - touchEndY > 50) {
+    //         // Swipe up
+    //         currentIndex++;
+    //     } else if (touchEndY - touchStartY > 50) {
+    //         // Swipe down
+    //         currentIndex--;
+    //     }
 
-        // Ensure the index is within bounds
-        if (currentIndex < 0) currentIndex = 0;
-        if (currentIndex >= sections.length) currentIndex = sections.length - 1;
+    //     // Ensure the index is within bounds
+    //     if (currentIndex < 0) currentIndex = 0;
+    //     if (currentIndex >= sections.length) currentIndex = sections.length - 1;
 
-        scrollToSection(currentIndex);
-    });
+    //     scrollToSection(currentIndex);
+    // });
 });
 
 // end mouse scroll
