@@ -69,6 +69,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // for mouse scroll
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     let sections = document.querySelectorAll("section");
+//     let currentIndex = 0;
+//     let isScrolling = false;
+
+//     function scrollToSection(index) {
+//         if (index >= 0 && index < sections.length) {
+//             isScrolling = true;
+//             window.scrollTo({
+//                 top: sections[index].offsetTop,
+//                 behavior: "smooth"
+//             });
+//             setTimeout(() => {
+//                 isScrolling = false;
+//             }, 800); // Delay to prevent multiple fast scrolls
+//         }
+//     }
+
+//     window.addEventListener("wheel", function (event) {
+//         if (isScrolling) return; // Prevent multiple triggers
+
+//         if (event.deltaY > 0) {
+//             // Scroll down
+//             currentIndex++;
+//         } else {
+//             // Scroll up
+//             currentIndex--;
+//         }
+
+//         // Ensure the index is within bounds
+//         if (currentIndex < 0) currentIndex = 0;
+//         if (currentIndex >= sections.length) currentIndex = sections.length - 1;
+
+//         scrollToSection(currentIndex);
+//     });
+// });
+
+
+
+/////////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", function () {
     let sections = document.querySelectorAll("section");
     let currentIndex = 0;
@@ -87,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Handle mouse wheel scrolling for desktops
     window.addEventListener("wheel", function (event) {
         if (isScrolling) return; // Prevent multiple triggers
 
@@ -95,6 +137,32 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex++;
         } else {
             // Scroll up
+            currentIndex--;
+        }
+
+        // Ensure the index is within bounds
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex >= sections.length) currentIndex = sections.length - 1;
+
+        scrollToSection(currentIndex);
+    });
+
+    // Handle touch events for mobile devices
+    let touchStartY = 0;
+
+    window.addEventListener("touchstart", function (event) {
+        touchStartY = event.touches[0].clientY; // Get the initial touch position
+    });
+
+    window.addEventListener("touchmove", function (event) {
+        if (isScrolling) return; // Prevent multiple triggers
+
+        let touchEndY = event.touches[0].clientY; // Get the current touch position
+        if (touchStartY - touchEndY > 50) {
+            // Swipe up
+            currentIndex++;
+        } else if (touchEndY - touchStartY > 50) {
+            // Swipe down
             currentIndex--;
         }
 
