@@ -11,6 +11,13 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("FnixHoJaQflb1bBmY"); // Replace with your actual User ID
+        })();
+    </script>
+
 
 </head>
 
@@ -43,12 +50,14 @@
         <!-- Content on top of the canvas -->
         <div class="container-fluid vh-100 d-flex align-items-center">
             <div class="content">
-                <h3>Hey. It's Me</h3>
-                <h2>Akash Hivarkhede</h2>
-                <h3>And I'm</h3>
-                <h3>Full-Stack .NET Developer</h3>
-                <button class="btn btn-primary" style="margin-right: 10px;" onclick="handleButtonClick()">Click
-                    Me</button>
+                <h2>Hey. It's Me</h2>
+                <h1>Akash Hivarkhede</h1>
+                <h2>And I'm</h2>
+                <h2>Full-Stack .NET Developer</h2>
+                <!-- <button class="btn btn-primary" style="margin-right: 10px;" onclick="handleButtonClick()">Click
+                    Me</button> -->
+                    <a href="Akash_Hivarkhede_Resume.pdf" class="btn btn-primary" download="Akash_Hivarkhede_Resume">Download CV</a>
+                    <a href="Akash_Hivarkhede_Resume_4.pdf" class="btn btn-warning" download="Akash_Hivarkhede_Resume" target="_blank">GitHub</a>
             </div>
         </div>
     </section>
@@ -208,7 +217,7 @@
                     <p>A web-based system for searching, comparing, and booking bus tickets with seat selection,
                         payment integration, and user management.</p>
 
-                    <h5>💻 Technologies</h5>
+                    <h5>Technologies</h5>
                     <p><strong>C#</strong>, <strong>.NET MVC</strong>, <strong>Entity Framework</strong>,
                         <strong>SQL Server</strong>, <strong>Bootstrap</strong>
                     </p>
@@ -264,10 +273,10 @@
         <div class="container">
             <h2 class="text-center my-4">Contact Me</h2>
             <div class="row justify-content-center">
-                <div class="col-md-6 contact-card">
+                <div class="col-md-6 contact-card" style=" box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                     <h4 style="color: #007bff;">Get in Touch</h4>
                     <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
-                    <form style="text-align: left;">
+                    <!-- <form style="text-align: left;">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Your Name" required>
@@ -286,15 +295,76 @@
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form> -->
+                
+                    <form id="contact-form" onsubmit="sendEmail(event)" style="text-align: left;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h2><a href="#" style="text-decoration: none;">Akash Hivarkhede</a></h2>
+            <p>Software Developer | .NET Enthusiast</p>
+          </div>
+          
+          <div class="footer-right">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="https://github.com/AkashHivarkhede" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Akash Hivarkhede. All rights reserved.</p>
+        </div>
+      </footer>
+      
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the form element
+            var form = document.getElementById('contact-form');
+
+            emailjs.sendForm('service_p62w3a4', 'template_bvm2fgk', form)
+                .then(function() {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    alert('Failed to send email: ' + JSON.stringify(error));
+                });
+        }
+    </script>
     <script src="script.js"></script>
 
 </body>

@@ -90,6 +90,7 @@ canvas {
     color: white;
 }
 
+
 .btn-custom {
     background-color: #4CAF50;
     color: white;
@@ -348,3 +349,64 @@ ul {
 .btn {
     margin-right: 10px;
 }
+
+/* footer */
+
+.footer {
+    background-color: black;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-left h2 {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .footer-left h2 a {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .footer-left h2 a:hover{
+    color:#007bff;
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    color: #cccccc;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-right a:hover {
+    color: #007bff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaaaaa;
+  }
+  
