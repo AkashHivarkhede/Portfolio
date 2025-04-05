@@ -9,13 +9,14 @@
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("FnixHoJaQflb1bBmY"); // Replace with your actual User ID
+            emailjs.init("FnixHoJaQflb1bBmY");
         })();
     </script>
 
@@ -65,8 +66,6 @@
     <!-- Skills Section -->
     <section id="skills" class="bg-light">
         <div class="container">
-            <!-- <h2>My Skills</h2>
-            <p>ASP.NET, C#, SQL, JavaScript, HTML, CSS, Bootstrap</p> -->
             <h2 class="text-center my-4">My Skills</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8 skills-card">
@@ -81,20 +80,27 @@
                         <span class="skill">C#</span>
                         <span class="skill">JavaScript</span>
                         <span class="skill">TypeScript</span>
-                        <span class="skill">.NET Core</span>
+                        <span class="skill">.NET Core 8</span>
+                        <span class="skill">DOT NET Framework 4.8</span>
                         <span class="skill">ASP.NET MVC 5</span>
-                        <span class="skill">WEB API 2</span>
+                        <span class="skill">ASP.NET WEB API 2</span>
                         <span class="skill">MVC Core 8</span>
                         <span class="skill">WEB API Core 8</span>
                         <span class="skill">Entity Framework</span>
+                        <span class="skill">ADO.NET</span>
                         <span class="skill">LINQ</span>
                         <span class="skill">SQL Server</span>
-                        <span class="skill">Visual Studio</span>
+                        <span class="skill">SOLID Principles</span>
+                        <span class="skill">Design Patterns</span>
+                        <span class="skill">Visual Studio Code</span>
                         <span class="skill">VS Code</span>
+                        <span class="skill">SQL Server Management Studio</span>
                         <span class="skill">Postman</span>
-                        <span class="skill">Swagger</span>
+                        <span class="skill">SwaggerUI</span>
+                        <span class="skill">Fiddler</span>
                         <span class="skill">Serilog</span>
                         <span class="skill">Log4net</span>
+                        <span class="skill">AutoMapper</span>
                         <span class="skill">xUnit</span>
                         <span class="skill">Moq</span>
                     </div>
@@ -104,132 +110,43 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <!-- <section id="projects">
-        <div class="container">
-            <h2 class="text-center my-4">Projects</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10 project-card">
-                    <h4>Bus Booking System</h4>
-                    <h5>Overview</h5>
-                    <p>The Bus Booking System enables users to search, compare, and book bus tickets for various routes
-                        across the country. It includes user registration, seat selection, payment integration, and
-                        ticket generation, similar to the RedBus website.</p>
-
-                    <h5>Key Features</h5>
-                    <ul style="list-style: none;">
-                        <li><strong>User Authentication:</strong> Users can register as passengers or admins, with admin
-                            users managing system settings and user roles.</li>
-                        <li><strong>Bus Booking Process:</strong> Users can search for buses, select seats, review
-                            booking details, and complete payments securely.</li>
-                        <li><strong>Admin Module:</strong> Admins can manage users, buses, bookings, and generate
-                            reports for analytics.</li>
-                        <li><strong>Scalability:</strong> Cloud-based infrastructure supporting horizontal and vertical
-                            scaling.</li>
-                        <li><strong>Security:</strong> Robust security measures including encryption and access
-                            controls.</li>
-                        <li><strong>User-Friendly Interface:</strong> Designed for both web and mobile applications.
-                        </li>
-                    </ul>
-
-                    <h5>Architecture</h5>
-                    <p>The architecture ensures high reliability, scalability, and security through a layered approach:
-                    </p>
-                    <ul style="list-style: none;">
-                        <li><strong>Presentation Layer:</strong> Web and Mobile Applications.</li>
-                        <li><strong>Business Logic Layer:</strong> Passenger and Admin Modules.</li>
-                        <li><strong>Data Access Layer:</strong> Entity Framework Core with Repository Pattern.</li>
-                        <li><strong>Database:</strong> SQL Server.</li>
-                    </ul>
-
-                    <h5>Database Design</h5>
-                    <p>The database schema includes tables for Users, Roles, Bookings, Buses, Payments, and more,
-                        ensuring efficient data organization and integrity.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <section id="projects">
-        <div class="container">
-            <h2 class="text-center my-4">Projects</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-10 project-card p-4 shadow rounded">
-                    <h3>Bus Booking System</h3>
-    
-                    <h5>📝 Overview</h5>
-                    <p>
-                        The <strong>Bus Booking System</strong> allows users to search, compare, and book bus tickets for 
-                        different routes across the country. It includes features such as user registration, seat selection, 
-                        payment integration, and ticket generation, similar to the RedBus website.
-                    </p>
-    
-                    <h5>💻 Technologies Used</h5>
-                    <p><strong>C#</strong>, <strong>.NET MVC</strong>, <strong>Entity Framework Core</strong>, 
-                        <strong>SQL Server</strong>, <strong>Bootstrap</strong></p>
-    
-                    <h5>✅ Key Features</h5>
-                    <ul>
-                        <li><strong>User Authentication:</strong> Passengers and admins can register, with admins managing 
-                            system settings and user roles.</li>
-                        <li><strong>Bus Booking Process:</strong> Users can search for buses, select seats, review booking 
-                            details, and complete payments securely.</li>
-                        <li><strong>Admin Module:</strong> Admins can manage users, buses, bookings, and generate reports 
-                            for analytics.</li>
-                        <li><strong>Scalability:</strong> Cloud-based infrastructure supporting horizontal and vertical 
-                            scaling.</li>
-                        <li><strong>Security:</strong> Robust security measures, including encryption and access controls.</li>
-                        <li><strong>User-Friendly Interface:</strong> Optimized for both web and mobile applications.</li>
-                    </ul>
-    
-                    <h5>🏗 Architecture</h5>
-                    <ul>
-                        <li><strong>Presentation Layer:</strong> Web and Mobile Applications</li>
-                        <li><strong>Business Logic Layer:</strong> Passenger and Admin Modules</li>
-                        <li><strong>Data Access Layer:</strong> Entity Framework Core with Repository Pattern</li>
-                        <li><strong>Database:</strong> SQL Server</li>
-                    </ul>
-    
-                    <h5>📊 Database Design</h5>
-                    <p>
-                        The database includes tables for <strong>Users, Roles, Bookings, Buses, Payments</strong>, 
-                        and more, ensuring efficient data organization and integrity.
-                    </p>
-    
-                    <h5>🔗 Project Links</h5>
-                    <p>
-                        <a href="#" class="btn btn-primary">Live Demo</a>
-                        <a href="#" class="btn btn-dark">GitHub Repository</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-     -->
-
     <section id="projects">
         <div class="container">
             <h2 class="text-center my-4">Projects</h2>
             <div class="row justify-content-center">
-                <div class="col-md-10 project-card p-4 shadow rounded">
-                    <h3>Bus Booking System</h3>
+                <div class="col-md-12 project-card p-4 shadow rounded">
+                    <h3>Buslify – Online Bus Booking System </h3>
 
                     <h5>Overview</h5>
-                    <p>A web-based system for searching, comparing, and booking bus tickets with seat selection,
-                        payment integration, and user management.</p>
+                    <p> Developed a comprehensive Bus Booking System aimed at simplifying the process of booking bus tickets for passengers. 
+                        The system offers an intuitive web-based platform that enables users to search for bus routes, compare prices, and book seats online in real-time.
+                        It integrates advanced features like e-ticket generation, seat selection, and payment processing, providing a seamless and efficient booking experience.</p>
+                        <!-- <p>
+                            This solution not only caters to the convenience of passengers but also assists bus operators in managing bookings, schedules, and customer data effectively. 
+                            The project was designed with a focus on user experience, security, and scalability to accommodate an increasing number of users and transactions.
+                        </p> -->
+                        <p>
+                            This system significantly enhanced operational efficiency for bus operators and improved customer satisfaction by offering a hassle-free booking process, 
+                            leading to an increase in online bookings and revenue growth for bus service providers.
+                        </p>
 
-                    <h5>Technologies</h5>
-                    <p><strong>C#</strong>, <strong>.NET MVC</strong>, <strong>Entity Framework</strong>,
-                        <strong>SQL Server</strong>, <strong>Bootstrap</strong>
-                    </p>
-
-                    <h5>Key Features</h5>
-                    <ul>
-                        <li><strong>Authentication:</strong> Passenger & Admin roles.</li>
-                        <li><strong>Bus Booking:</strong> Search, select seats, and pay securely.</li>
-                        <li><strong>Admin Panel:</strong> Manage users, buses, and reports.</li>
-                        <li><strong>Security:</strong> Encrypted transactions & role-based access.</li>
-                    </ul>
+                        <h5>Technologies</h5>
+                        <p>
+                            <strong>C#</strong>, <strong>.NET Core</strong>, <strong>Web API Core</strong>,
+                            <strong>Entity Framework Core</strong>, <strong>LINQ</strong>,
+                            <strong>SQL Server</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
+                            <strong>Bootstrap</strong>, <strong>JavaScript</strong>
+                        </p>
+        
+                        <h5>Key Features</h5>
+                        <ul>
+                            <li><strong>Real-Time Booking:</strong> Search routes, check availability, and book instantly.</li>
+                            <li><strong>Interactive Seat Selection:</strong> Choose preferred seats with live visuals.</li>
+                            <li><strong>E-Ticket Generation:</strong> Auto-generate downloadable tickets after booking.</li>
+                            <li><strong>Secure Payments:</strong> Integrated payment gateway for smooth transactions.</li>
+                            <li><strong>Admin Dashboard:</strong> Manage buses, routes, bookings, and customer data.</li>
+                            <li><strong>RESTful API:</strong> Powered by .NET Core Web API for scalable architecture.</li>
+                        </ul>
 
                     <h5>🔗 Links</h5>
                     <p>
@@ -240,6 +157,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- About Me Section -->
 
@@ -249,25 +167,35 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 about-card p-4 shadow rounded">
                     <h4 style="color: #007bff;">Hi, I'm Akash Hivarkhede</h4>
-                    <p>A passionate Full-Stack .NET Developer. I recently completed my BCA degree and have knowledge in:
+                    <p>
+                        I’m a passionate Full-Stack .NET Developer. I recently completed my BCA degree and have a strong foundation in both backend and frontend development.
+                        I enjoy solving complex problems, building scalable applications, and continuously learning new technologies.
                     </p>
-                    <ul>
-                    <li>OOPs, C#, LINQ, Entity Framework, MVC, Web API 2, Web API Core, .NET Core</li>
-                    <li>SQL and Web Development</li>
-                    </ul>
-                    <p>I enjoy solving complex problems and developing scalable applications.</p>
+    
                     <h5>Key Skills</h5>
                     <ul>
-                        <li>Full-Stack Development with .NET Core, MVC</li>
-                        <li>Responsive UI with HTML, CSS, JavaScript, jQuery, Bootstrap</li>
-                        <li>Database Management & SQL Queries</li>
+                        <li>Full-Stack Development with .NET Core and MVC</li>
+                        <li>Responsive UI using HTML, CSS, JavaScript, jQuery, Bootstrap</li>
+                        <li>Database Management and SQL Queries</li>
                         <li>Writing clean, maintainable, and scalable code</li>
+                    </ul>
+    
+                    <h5>Technical Proficiencies</h5>
+                    <ul>
+                        <li><strong>Programming Languages:</strong> OOPS, C#, TypeScript</li>
+                        <li><strong>Frameworks & Technologies:</strong> .NET Core 8, .NET Framework 4.8, Web API Core, MVC Core, Entity Framework Core, ASP.NET MVC 5, ASP.NET Web API 2, LINQ, Entity Framework, ADO.NET, HTML, CSS, Bootstrap, Angular</li>
+                        <li><strong>Database Management:</strong> SQL Server 2019</li>
+                        <li><strong>Version Control:</strong> Git, GitHub</li>
+                        <li><strong>Tools & IDEs:</strong> Visual Studio 2017/2022, SQL Server Management Studio 2017/2019, Visual Studio Code</li>
+                        <li><strong>Standard Guidelines:</strong> SOLID Principles, Design Patterns</li>
+                        <li><strong>Other Tools:</strong> Fiddler, Postman, SwaggerUI</li>
+                        <li><strong>Testing & Other Frameworks:</strong> xUnit, Moq, Log4net, Serilog, AutoMapper</li>
+                        <li><strong>CI/CD & Deployment:</strong> IIS, Jenkins, SonarQube, Nexus</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact">
@@ -277,26 +205,6 @@
                 <div class="col-md-6 contact-card" style=" box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                     <h4 style="color: #007bff;">Get in Touch</h4>
                     <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
-                    <!-- <form style="text-align: left;">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form> -->
                 
                     <form id="contact-form" onsubmit="sendEmail(event)" style="text-align: left;">
                         <div class="form-group">
@@ -338,7 +246,7 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
             <a href="https://github.com/AkashHivarkhede" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/akash-hivarkhede-5198b3359/" target="_blank">LinkedIn</a>
           </div>
         </div>
         
